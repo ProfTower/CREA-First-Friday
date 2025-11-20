@@ -1,0 +1,25 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-bg {
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item .overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.archive-btn.active {
+  background-color: #06b6d4; /* cyan-500 */
+  color: white;
+  border-color: #06b6d4;
+}
