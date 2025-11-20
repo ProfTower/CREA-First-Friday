@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual First Friday | Student Showcase</title>
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-white antialiased">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-40">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-cyan-400">Virtual First Friday</h1>
+        <div class="space-x-4">
+          <a
+            href="#crea202"
+            class="text-gray-300 hover:text-cyan-400 transition"
+            >Creative Coding</a
+          >
+          <a
+            href="#crea330"
+            class="text-gray-300 hover:text-cyan-400 transition"
+            >Web Design</a
+          >
+          <a
+            href="#crea391"
+            class="text-gray-300 hover:text-cyan-400 transition"
+            >Game Design</a
+          >
+          <a
+            href="#archive"
+            class="text-gray-300 hover:text-cyan-400 transition"
+            >Archive</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 py-20 text-center">
+      <div class="container mx-auto px-6">
+        <h2
+          id="showcase-title"
+          class="text-5xl font-extrabold text-white tracking-tight"
+        ></h2>
+        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
+          Welcome to our Virtual First Friday gallery! Inspired by Richmond's
+          vibrant art walk, this space celebrates the innovative work of
+          students in creative technology courses. Explore the current showcase
+          or dive into our archives.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+      <!-- CREA 202: Creative Coding -->
+      <section id="crea202" class="mb-16 scroll-mt-20">
+        <h3 class="text-3xl font-bold mb-2 text-cyan-300">
+          CREA 202: Creative Coding & Music Production
+        </h3>
+        <p class="text-gray-400 mb-8 max-w-4xl">
+          Students in this course use Python with EarSketch to create music
+          through code, learning programming fundamentals while exploring
+          algorithmic composition and sound design.
+        </p>
+        <div
+          id="crea202-gallery"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- JS will populate this -->
+        </div>
+      </section>
+
+      <!-- CREA 330: Web Design -->
+      <section id="crea330" class="mb-16 scroll-mt-20">
+        <h3 class="text-3xl font-bold mb-2 text-green-300">
+          CREA 330: Interdisciplinary Web Design
+        </h3>
+        <p class="text-gray-400 mb-8 max-w-4xl">
+          This course focuses on modern web development using HTML, CSS, and
+          JavaScript. Students design and build responsive, interactive websites
+          for various purposes, from portfolios to e-commerce mockups.
+        </p>
+        <div
+          id="crea330-gallery"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- JS will populate this -->
+        </div>
+      </section>
+
+      <!-- CREA 391: Game Design -->
+      <section id="crea391" class="mb-16 scroll-mt-20">
+        <h3 class="text-3xl font-bold mb-2 text-purple-300">
+          CREA 391: 2D Game Design & Development
+        </h3>
+        <p class="text-gray-400 mb-8 max-w-4xl">
+          Students use GameMaker to bring their 2D game ideas to life. The
+          curriculum covers game mechanics, level design, sprite animation, and
+          scripting, culminating in a playable game prototype.
+        </p>
+        <div
+          id="crea391-gallery"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- JS will populate this -->
+        </div>
+      </section>
+
+      <!-- Archive Section -->
+      <section id="archive" class="mb-16 scroll-mt-20">
+        <h3 class="text-3xl font-bold mb-2 text-gray-300">Showcase Archive</h3>
+        <p class="text-gray-400 mb-8 max-w-4xl">
+          Explore work from previous months and semesters. Select a showcase to
+          view the projects.
+        </p>
+        <div id="archive-links" class="flex flex-wrap gap-4">
+          <!-- JS will populate this -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+        <p>&copy; 2025 Creative Technologies Program. All Rights Reserved.</p>
+        <p class="mt-2">Promoting student talent and innovation.</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      id="projectModal"
+      class="modal-bg fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden opacity-0"
+      onclick="closeModal()"
+    >
+      <div
+        class="modal-content bg-gray-800 rounded-lg shadow-2xl w-full max-w-3xl max-h-full overflow-y-auto transform scale-95 opacity-0"
+        onclick="event.stopPropagation()"
+      >
+        <div class="p-8 relative">
+          <button
+            onclick="closeModal()"
+            class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-2xl"
+          >
+            &times;
+          </button>
+          <div id="modal-body">
+            <!-- Dynamic content will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
