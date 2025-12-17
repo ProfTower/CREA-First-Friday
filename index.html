@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virtual First Friday | Student Showcase</title>
-    <!-- JavaScript -->
-    <script src="script.js" defer></script>
+    <title>Virtual First Friday | Creative Technologies Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,155 +11,500 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .modal-bg {
+        transition: opacity 0.3s ease;
+      }
+      .modal-content {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .gallery-item:hover .overlay {
+        opacity: 1;
+      }
+      .gallery-item .overlay {
+        transition: opacity 0.3s ease-in-out;
+      }
+      .archive-pill.active {
+        background-color: #06b6d4; /* cyan-500 */
+        color: white;
+        border-color: #06b6d4;
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+      }
+      .semester-badge {
+        background: linear-gradient(90deg, #0891b2, #0e7490);
+      }
+    </style>
   </head>
   <body class="bg-gray-900 text-white antialiased">
-    <!-- Header -->
-    <header class="bg-gray-800 shadow-lg sticky top-0 z-40">
+    <!-- Navigation -->
+    <header
+      class="bg-gray-800/95 backdrop-blur-sm shadow-xl sticky top-0 z-40 border-b border-gray-700"
+    >
       <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4"
       >
-        <h1 class="text-2xl font-bold text-cyan-400">Virtual First Friday</h1>
-        <div class="space-x-4">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center font-bold text-gray-900 text-xl"
+          >
+            VF
+          </div>
+          <h1 class="text-xl font-bold tracking-tight text-white">
+            Virtual First Friday
+          </h1>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
           <a
             href="#crea202"
-            class="text-gray-300 hover:text-cyan-400 transition"
-            >Creative Coding</a
+            class="text-gray-400 hover:text-cyan-400 transition-colors uppercase tracking-wider"
+            >CREA 202</a
           >
           <a
             href="#crea330"
-            class="text-gray-300 hover:text-cyan-400 transition"
-            >Web Design</a
+            class="text-gray-400 hover:text-green-400 transition-colors uppercase tracking-wider"
+            >CREA 330</a
           >
           <a
             href="#crea391"
-            class="text-gray-300 hover:text-cyan-400 transition"
-            >Game Design</a
+            class="text-gray-400 hover:text-purple-400 transition-colors uppercase tracking-wider"
+            >CREA 391</a
           >
           <a
             href="#archive"
-            class="text-gray-300 hover:text-cyan-400 transition"
-            >Archive</a
+            class="text-gray-400 hover:text-white transition-colors uppercase tracking-wider border-l border-gray-700 pl-6"
+            >Archives</a
           >
         </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gray-900 py-20 text-center">
-      <div class="container mx-auto px-6">
+    <section class="relative overflow-hidden bg-gray-900 pt-24 pb-16">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500 via-transparent to-transparent"
+        ></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10 text-center">
+        <span
+          id="current-semester-tag"
+          class="semester-badge inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6"
+        >
+          Current Semester
+        </span>
         <h2
-          id="showcase-title"
-          class="text-5xl font-extrabold text-white tracking-tight"
-        ></h2>
-        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
-          Welcome to our Virtual First Friday gallery! Inspired by Richmond's
-          vibrant art walk, this space celebrates the innovative work of
-          students in creative technology courses. Explore the current showcase
-          or dive into our archives.
+          id="showcase-display-title"
+          class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6"
+        >
+          FALL 2025
+        </h2>
+        <p
+          class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+        >
+          Showcasing excellence in Creative Coding, Web Design, and Game
+          Development from the downtown Arts District to the digital frontier.
         </p>
       </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Project Galleries -->
     <main class="container mx-auto px-6 py-12">
-      <!-- CREA 202: Creative Coding -->
-      <section id="crea202" class="mb-16 scroll-mt-20">
-        <h3 class="text-3xl font-bold mb-2 text-cyan-300">
-          CREA 202: Creative Coding & Music Production
-        </h3>
-        <p class="text-gray-400 mb-8 max-w-4xl">
-          Students in this course use Python with EarSketch to create music
-          through code, learning programming fundamentals while exploring
-          algorithmic composition and sound design.
-        </p>
+      <!-- CREA 202 -->
+      <section id="crea202" class="mb-24 scroll-mt-28">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="h-px flex-1 bg-gray-800"></div>
+          <h3 class="text-2xl font-bold text-cyan-400 px-4">
+            CREA 202: Python & EarSketch
+          </h3>
+          <div class="h-px flex-1 bg-gray-800"></div>
+        </div>
         <div
           id="crea202-gallery"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <!-- JS will populate this -->
+          <!-- Loaded by JS -->
         </div>
       </section>
 
-      <!-- CREA 330: Web Design -->
-      <section id="crea330" class="mb-16 scroll-mt-20">
-        <h3 class="text-3xl font-bold mb-2 text-green-300">
-          CREA 330: Interdisciplinary Web Design
-        </h3>
-        <p class="text-gray-400 mb-8 max-w-4xl">
-          This course focuses on modern web development using HTML, CSS, and
-          JavaScript. Students design and build responsive, interactive websites
-          for various purposes, from portfolios to e-commerce mockups.
-        </p>
+      <!-- CREA 330 -->
+      <section id="crea330" class="mb-24 scroll-mt-28">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="h-px flex-1 bg-gray-800"></div>
+          <h3 class="text-2xl font-bold text-green-400 px-4">
+            CREA 330: Interdisciplinary Web Design
+          </h3>
+          <div class="h-px flex-1 bg-gray-800"></div>
+        </div>
         <div
           id="crea330-gallery"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <!-- JS will populate this -->
+          <!-- Loaded by JS -->
         </div>
       </section>
 
-      <!-- CREA 391: Game Design -->
-      <section id="crea391" class="mb-16 scroll-mt-20">
-        <h3 class="text-3xl font-bold mb-2 text-purple-300">
-          CREA 391: 2D Game Design & Development
-        </h3>
-        <p class="text-gray-400 mb-8 max-w-4xl">
-          Students use GameMaker to bring their 2D game ideas to life. The
-          curriculum covers game mechanics, level design, sprite animation, and
-          scripting, culminating in a playable game prototype.
-        </p>
+      <!-- CREA 391 -->
+      <section id="crea391" class="mb-24 scroll-mt-28">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="h-px flex-1 bg-gray-800"></div>
+          <h3 class="text-2xl font-bold text-purple-400 px-4">
+            CREA 391: 2D Game Design
+          </h3>
+          <div class="h-px flex-1 bg-gray-800"></div>
+        </div>
         <div
           id="crea391-gallery"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <!-- JS will populate this -->
+          <!-- Loaded by JS -->
         </div>
       </section>
 
       <!-- Archive Section -->
-      <section id="archive" class="mb-16 scroll-mt-20">
-        <h3 class="text-3xl font-bold mb-2 text-gray-300">Showcase Archive</h3>
-        <p class="text-gray-400 mb-8 max-w-4xl">
-          Explore work from previous months and semesters. Select a showcase to
-          view the projects.
-        </p>
-        <div id="archive-links" class="flex flex-wrap gap-4">
-          <!-- JS will populate this -->
+      <section
+        id="archive"
+        class="bg-gray-800/50 rounded-3xl p-8 md:p-12 mb-16 border border-gray-700/50 scroll-mt-28"
+      >
+        <div class="max-w-3xl mb-10">
+          <h3 class="text-3xl font-bold text-white mb-4">
+            The Semester Archive
+          </h3>
+          <p class="text-gray-400">
+            Explore historical student projects. Selecting a semester will
+            update the galleries above with that semester's submissions.
+          </p>
+        </div>
+
+        <div id="archive-links" class="flex flex-wrap gap-3">
+          <!-- Loaded by JS -->
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700">
-      <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-        <p>&copy; 2025 Creative Technologies Program. All Rights Reserved.</p>
-        <p class="mt-2">Promoting student talent and innovation.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="text-center md:text-left">
+          <h4 class="font-bold text-white text-lg">Virtual First Friday</h4>
+          <p class="text-gray-500 text-sm mt-1">
+            Inspired by Richmond, VA's downtown arts community.
+          </p>
+        </div>
+        <div class="flex gap-8 text-gray-400 text-sm uppercase tracking-widest">
+          <span class="hover:text-white cursor-help">Creative Coding</span>
+          <span class="hover:text-white cursor-help">Web Design</span>
+          <span class="hover:text-white cursor-help">Game Dev</span>
+        </div>
       </div>
     </footer>
 
     <!-- Modal -->
     <div
       id="projectModal"
-      class="modal-bg fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden opacity-0"
+      class="modal-bg fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50 hidden opacity-0"
       onclick="closeModal()"
     >
       <div
-        class="modal-content bg-gray-800 rounded-lg shadow-2xl w-full max-w-3xl max-h-full overflow-y-auto transform scale-95 opacity-0"
+        class="modal-content bg-gray-800 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 border border-gray-700"
         onclick="event.stopPropagation()"
       >
-        <div class="p-8 relative">
+        <div class="p-6 md:p-10 relative">
           <button
             onclick="closeModal()"
-            class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-2xl"
+            class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors text-3xl"
           >
             &times;
           </button>
           <div id="modal-body">
-            <!-- Dynamic content will be injected here -->
+            <!-- Loaded by JS -->
           </div>
         </div>
       </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+      /**
+       * SEMESTER DATA REPOSITORY
+       * To update:
+       * 1. Add a new object key (e.g., 'fall2026')
+       * 2. Set 'isCurrent: true' for the latest and false for others
+       * 3. Fill the 'courses' arrays with project objects
+       */
+      const semesterData = {
+        fall2025: {
+          id: 'fall2025',
+          displayTitle: 'Fall 2025',
+          isCurrent: true,
+          courses: {
+            crea202: [
+              {
+                id: 'f25-c202-1',
+                title: 'Cybernetic Symphony',
+                author: 'Jordan V.',
+                thumb:
+                  'https://placehold.co/600x400/0E7490/FFFFFF?text=Cyber+Symphony',
+                media:
+                  '<div class="bg-black aspect-video rounded-xl flex items-center justify-center text-cyan-500 border border-cyan-900/50">EarSketch Player Placeholder</div>',
+                description:
+                  'A Python-driven composition exploring complex tempo shifts and procedural percussion layering.',
+                link: '#',
+              },
+            ],
+            crea330: [
+              {
+                id: 'f25-c330-1',
+                title: 'Museum of the Future',
+                author: 'Elena S.',
+                thumb:
+                  'https://placehold.co/600x400/059669/FFFFFF?text=Digital+Museum',
+                media:
+                  '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Museum+UI+View" class="w-full rounded-xl">',
+                description:
+                  'A React-based virtual gallery experience with immersive CSS animations.',
+                link: '#',
+              },
+            ],
+            crea391: [
+              {
+                id: 'f25-c391-1',
+                title: 'Neon Runner',
+                author: 'Marcus K.',
+                thumb:
+                  'https://placehold.co/600x400/7E22CE/FFFFFF?text=Neon+Runner',
+                media:
+                  '<div class="bg-gray-900 aspect-video rounded-xl flex items-center justify-center text-purple-400 border border-purple-900/50 font-mono">GameMaker Gameplay Clip</div>',
+                description:
+                  'A high-speed precision platformer featuring frame-perfect collision logic.',
+                link: '#',
+              },
+            ],
+          },
+        },
+        spring2025: {
+          id: 'spring2025',
+          displayTitle: 'Spring 2025',
+          isCurrent: false,
+          courses: {
+            crea202: [
+              {
+                id: 's25-c202-1',
+                title: 'Botanical Beats',
+                author: 'Sam L.',
+                thumb:
+                  'https://placehold.co/600x400/164E63/FFFFFF?text=Bio+Beats',
+                media:
+                  '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">EarSketch Preview</div>',
+                description:
+                  'Music generated using Fibonacci sequences for rhythmic interval patterns.',
+                link: '#',
+              },
+            ],
+            crea330: [
+              {
+                id: 's25-c330-1',
+                title: 'Local Richmond Guide',
+                author: 'Casey R.',
+                thumb:
+                  'https://placehold.co/600x400/15803D/FFFFFF?text=RVA+Guide',
+                media:
+                  '<img src="https://placehold.co/800x500/15803D/FFFFFF?text=Project+View" class="w-full rounded-xl">',
+                description:
+                  'A community resource site showcasing local restaurants and First Friday events.',
+                link: '#',
+              },
+            ],
+            crea391: [
+              {
+                id: 's25-c391-1',
+                title: 'Void Walker',
+                author: 'Taylor F.',
+                thumb:
+                  'https://placehold.co/600x400/6B21A8/FFFFFF?text=Void+Walker',
+                media:
+                  '<div class="bg-black aspect-video rounded-xl flex items-center justify-center italic">Video of Gameplay</div>',
+                description:
+                  'A puzzle-adventure exploring physics-based world manipulation.',
+                link: '#',
+              },
+            ],
+          },
+        },
+        fall2024: {
+          id: 'fall2024',
+          displayTitle: 'Fall 2024',
+          isCurrent: false,
+          courses: {
+            crea202: [],
+            crea330: [
+              {
+                id: 'f24-c330-1',
+                title: 'The Portfolio Lab',
+                author: 'Riley M.',
+                thumb:
+                  'https://placehold.co/600x400/0f172a/FFFFFF?text=Portfolio+v1',
+                media:
+                  '<img src="https://placehold.co/800x500/0f172a/FFFFFF?text=Old+Portfolio" class="w-full rounded-xl">',
+                description:
+                  'Early explorations into responsive layouts and CSS grid systems.',
+                link: '#',
+              },
+            ],
+            crea391: [
+              {
+                id: 'f24-c391-1',
+                title: 'Pixel Quest',
+                author: 'Avery B.',
+                thumb:
+                  'https://placehold.co/600x400/4c1d95/FFFFFF?text=Pixel+Quest',
+                media:
+                  '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">Game Demo</div>',
+                description:
+                  'A simple RPG prototype focusing on NPC dialogue systems.',
+                link: '#',
+              },
+            ],
+          },
+        },
+      };
+
+      let currentActiveKey = 'fall2025';
+
+      const modal = document.getElementById('projectModal');
+      const modalBody = document.getElementById('modal-body');
+
+      // Logic to build a card
+      function buildCard(project) {
+        return `
+                <div class="gallery-item group bg-gray-800/40 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyan-500/50 transition-all cursor-pointer" onclick="openModal('${project.id}')">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img src="${project.thumb}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="overlay absolute inset-0 bg-gray-900/60 flex items-center justify-center opacity-0 backdrop-blur-sm">
+                            <button class="bg-white text-gray-900 px-5 py-2 rounded-full font-bold text-sm">Review Work</button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">${project.title}</h4>
+                        <p class="text-gray-500 text-sm mt-1">By ${project.author}</p>
+                    </div>
+                </div>
+            `;
+      }
+
+      // Logic to render a semester
+      function renderSemester(key) {
+        const sem = semesterData[key];
+        if (!sem) return;
+
+        // Update UI Titles
+        document.getElementById('showcase-display-title').textContent =
+          sem.displayTitle.toUpperCase();
+        document.getElementById('current-semester-tag').textContent =
+          sem.isCurrent ? 'Current Semester' : 'Archive Collection';
+        document.getElementById('current-semester-tag').className =
+          sem.isCurrent
+            ? 'semester-badge inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6'
+            : 'bg-gray-700 inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-gray-300 mb-6';
+
+        // Populate Galleries
+        const courseIds = ['crea202', 'crea330', 'crea391'];
+        courseIds.forEach((id) => {
+          const container = document.getElementById(`${id}-gallery`);
+          const projects = sem.courses[id];
+
+          if (projects && projects.length > 0) {
+            container.innerHTML = projects.map(buildCard).join('');
+          } else {
+            container.innerHTML = `<div class="col-span-full py-12 text-center bg-gray-800/20 rounded-2xl border border-dashed border-gray-700">
+                        <p class="text-gray-500 italic">No submissions archived for this course in ${sem.displayTitle}.</p>
+                    </div>`;
+          }
+        });
+      }
+
+      // Build archive navigation
+      function buildArchiveNav() {
+        const nav = document.getElementById('archive-links');
+        nav.innerHTML = '';
+
+        Object.keys(semesterData).forEach((key) => {
+          const sem = semesterData[key];
+          const btn = document.createElement('button');
+          btn.textContent = sem.displayTitle;
+          btn.className = `archive-pill px-6 py-3 rounded-full border border-gray-700 font-semibold text-sm transition-all hover:border-cyan-400 ${
+            key === currentActiveKey ? 'active' : 'text-gray-400'
+          }`;
+          btn.onclick = () => {
+            currentActiveKey = key;
+            renderSemester(key);
+            buildArchiveNav();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          };
+          nav.appendChild(btn);
+        });
+      }
+
+      function openModal(projectId) {
+        const sem = semesterData[currentActiveKey];
+        let found = null;
+        Object.values(sem.courses).forEach((list) => {
+          const p = list.find((item) => item.id === projectId);
+          if (p) found = p;
+        });
+
+        if (!found) return;
+
+        modalBody.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="mb-6">${found.media}</div>
+                        <a href="${found.link}" target="_blank" class="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-4 rounded-xl transition-colors">
+                            Launch Full Project
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-black text-white mb-2">${found.title}</h3>
+                        <p class="text-cyan-400 font-medium text-lg mb-6">By ${found.author}</p>
+                        <div class="h-px bg-gray-700 w-20 mb-6"></div>
+                        <h5 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Project Description</h5>
+                        <p class="text-gray-300 leading-relaxed mb-8">${found.description}</p>
+                        <p class="text-sm text-gray-500 italic">Submitted for ${sem.displayTitle}</p>
+                    </div>
+                </div>
+            `;
+
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modal
+            .querySelector('.modal-content')
+            .classList.remove('scale-95', 'opacity-0');
+        }, 10);
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0');
+        modal
+          .querySelector('.modal-content')
+          .classList.add('scale-95', 'opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      window.onload = () => {
+        renderSemester(currentActiveKey);
+        buildArchiveNav();
+      };
+    </script>
   </body>
 </html>
