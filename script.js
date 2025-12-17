@@ -1,137 +1,134 @@
-// --- Showcase Data ---
-// To add a new month, copy an existing entry (like 'oct2025'), give it a new key (e.g., 'nov2025'),
-// update the displayTitle, and fill in the new projects.
-// Then, change the `currentShowcaseKey` variable to the new key to make it the default.
-const showcaseData = {
-  oct2025: {
-    displayTitle: 'October 2025',
+/**
+ * SEMESTER DATA REPOSITORY
+ * To update:
+ * 1. Add a new object key (e.g., 'fall2026')
+ * 2. Set 'isCurrent: true' for the latest and false for others
+ * 3. Fill the 'courses' arrays with project objects
+ */
+const semesterData = {
+  fall2025: {
+    id: 'fall2025',
+    displayTitle: 'Fall 2025',
+    isCurrent: true,
     courses: {
       crea202: [
         {
-          id: 'oct2025-c202-1',
-          title: 'Algorithmic Anthem',
-          author: 'Alex Johnson',
+          id: 'f25-c202-1',
+          title: 'Cybernetic Symphony',
+          author: 'Jordan V.',
           thumb:
-            'https://placehold.co/600x400/0E7490/FFFFFF?text=Synthwave+Beat',
+            'https://placehold.co/600x400/0E7490/FFFFFF?text=Cyber+Symphony',
           media:
-            '<iframe class="w-full h-96 rounded-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center text-cyan-500 border border-cyan-900/50">EarSketch Player Placeholder</div>',
           description:
-            'This piece was generated using Python in EarSketch. It explores the relationship between mathematical patterns and musical harmony, creating a dynamic synthwave track that evolves over time.',
+            'A Python-driven composition exploring complex tempo shifts and procedural percussion layering.',
           link: '#',
         },
       ],
       crea330: [
         {
-          id: 'oct2025-c330-1',
-          title: 'Interactive Resume',
-          author: 'Fatima Al-Kuwari',
+          id: 'f25-c330-1',
+          title: 'Museum of the Future',
+          author: 'Elena S.',
           thumb:
-            'https://placehold.co/600x400/059669/FFFFFF?text=Portfolio+Site',
+            'https://placehold.co/600x400/059669/FFFFFF?text=Digital+Museum',
           media:
-            '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Portfolio+Site" alt="Portfolio Screenshot" class="w-full h-auto rounded-md">',
+            '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Museum+UI+View" class="w-full rounded-xl">',
           description:
-            'A personal portfolio website built with HTML, CSS, and vanilla JavaScript. It features a responsive layout and a filterable project gallery.',
+            'A React-based virtual gallery experience with immersive CSS animations.',
           link: '#',
         },
       ],
       crea391: [
         {
-          id: 'oct2025-c391-1',
-          title: 'Galactic Guardian',
-          author: 'Kenji Tanaka',
-          thumb:
-            'https://placehold.co/600x400/7E22CE/FFFFFF?text=Pixel+Art+Game',
+          id: 'f25-c391-1',
+          title: 'Neon Runner',
+          author: 'Marcus K.',
+          thumb: 'https://placehold.co/600x400/7E22CE/FFFFFF?text=Neon+Runner',
           media:
-            '<iframe class="w-full h-96 rounded-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<div class="bg-gray-900 aspect-video rounded-xl flex items-center justify-center text-purple-400 border border-purple-900/50 font-mono">GameMaker Gameplay Clip</div>',
           description:
-            'A top-down arcade shooter created in GameMaker. The game features multiple enemy types, power-ups, and an escalating difficulty curve.',
+            'A high-speed precision platformer featuring frame-perfect collision logic.',
           link: '#',
         },
       ],
     },
   },
-  sep2025: {
-    displayTitle: 'September 2025',
+  spring2025: {
+    id: 'spring2025',
+    displayTitle: 'Spring 2025',
+    isCurrent: false,
     courses: {
       crea202: [
         {
-          id: 'sep2025-c202-1',
-          title: 'Code-Generated Chill',
-          author: 'Maria Garcia',
-          thumb: 'https://placehold.co/600x400/164E63/FFFFFF?text=Lo-Fi+Rhythm',
+          id: 's25-c202-1',
+          title: 'Botanical Beats',
+          author: 'Sam L.',
+          thumb: 'https://placehold.co/600x400/164E63/FFFFFF?text=Bio+Beats',
           media:
-            '<div class="bg-gray-700 w-full h-96 rounded-md flex items-center justify-center"><p class="text-gray-400">Audio Player Placeholder</p></div>',
+            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">EarSketch Preview</div>',
           description:
-            'A relaxing lo-fi hip hop track created entirely with code, focusing on using nested loops to create complex rhythmic patterns.',
-          link: '#',
-        },
-        {
-          id: 'sep2025-c202-2',
-          title: 'Digital Drum Machine',
-          author: 'Chen Wei',
-          thumb: 'https://placehold.co/600x400/083344/FFFFFF?text=Techno+Loop',
-          media:
-            '<div class="bg-gray-700 w-full h-96 rounded-md flex items-center justify-center"><p class="text-gray-400">Audio Player Placeholder</p></div>',
-          description:
-            'An exploration of techno and house rhythms built with a custom drum machine script in Python.',
+            'Music generated using Fibonacci sequences for rhythmic interval patterns.',
           link: '#',
         },
       ],
       crea330: [
         {
-          id: 'sep2025-c330-1',
-          title: 'Artisan Goods Shop',
-          author: 'David Miller',
-          thumb: 'https://placehold.co/600x400/15803D/FFFFFF?text=E-Commerce',
+          id: 's25-c330-1',
+          title: 'Local Richmond Guide',
+          author: 'Casey R.',
+          thumb: 'https://placehold.co/600x400/15803D/FFFFFF?text=RVA+Guide',
           media:
-            '<img src="https://placehold.co/800x500/15803D/FFFFFF?text=E-Commerce+Site" alt="E-commerce Screenshot" class="w-full h-auto rounded-md">',
+            '<img src="https://placehold.co/800x500/15803D/FFFFFF?text=Project+View" class="w-full rounded-xl">',
           description:
-            'A fully responsive e-commerce website prototype for a fictional artisan goods store. JavaScript is used to manage a shopping cart.',
+            'A community resource site showcasing local restaurants and First Friday events.',
           link: '#',
         },
       ],
-      crea391: [],
+      crea391: [
+        {
+          id: 's25-c391-1',
+          title: 'Void Walker',
+          author: 'Taylor F.',
+          thumb: 'https://placehold.co/600x400/6B21A8/FFFFFF?text=Void+Walker',
+          media:
+            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center italic">Video of Gameplay</div>',
+          description:
+            'A puzzle-adventure exploring physics-based world manipulation.',
+          link: '#',
+        },
+      ],
     },
   },
-  spring2025: {
-    displayTitle: 'Spring Semester 2025',
+  fall2024: {
+    id: 'fall2024',
+    displayTitle: 'Fall 2024',
+    isCurrent: false,
     courses: {
       crea202: [],
       crea330: [
         {
-          id: 'spr2025-c330-1',
-          title: 'Climate Change Visualizer',
-          author: 'Priya Sharma',
-          thumb: 'https://placehold.co/600x400/14532D/FFFFFF?text=Data+Viz',
+          id: 'f24-c330-1',
+          title: 'The Portfolio Lab',
+          author: 'Riley M.',
+          thumb: 'https://placehold.co/600x400/0f172a/FFFFFF?text=Portfolio+v1',
           media:
-            '<img src="https://placehold.co/800x500/14532D/FFFFFF?text=Data+Viz+Site" alt="Data Viz Screenshot" class="w-full h-auto rounded-md">',
+            '<img src="https://placehold.co/800x500/0f172a/FFFFFF?text=Old+Portfolio" class="w-full rounded-xl">',
           description:
-            'An interactive data visualization project that uses Chart.js to display historical climate data.',
+            'Early explorations into responsive layouts and CSS grid systems.',
           link: '#',
         },
       ],
       crea391: [
         {
-          id: 'spr2025-c391-1',
-          title: 'Forest Jumper',
-          author: 'Aisha Williams',
-          thumb:
-            'https://placehold.co/600x400/6B21A8/FFFFFF?text=Platformer+Game',
+          id: 'f24-c391-1',
+          title: 'Pixel Quest',
+          author: 'Avery B.',
+          thumb: 'https://placehold.co/600x400/4c1d95/FFFFFF?text=Pixel+Quest',
           media:
-            '<img src="https://placehold.co/800x500/6B21A8/FFFFFF?text=Platformer+Game" alt="Platformer Game Screenshot" class="w-full h-auto rounded-md">',
+            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">Game Demo</div>',
           description:
-            'A classic 2D platformer with a unique art style, focusing on fine-tuning player controls and creating engaging level design.',
-          link: '#',
-        },
-        {
-          id: 'spr2025-c391-2',
-          title: 'Chrono Maze',
-          author: 'Omar Hassan',
-          thumb: 'https://placehold.co/600x400/581C87/FFFFFF?text=Puzzle+Game',
-          media:
-            '<img src="https://placehold.co/800x500/581C87/FFFFFF?text=Puzzle+Game" alt="Puzzle Game Screenshot" class="w-full h-auto rounded-md">',
-          description:
-            'A puzzle game where the player manipulates time to solve complex mazes.',
+            'A simple RPG prototype focusing on NPC dialogue systems.',
           link: '#',
         },
       ],
@@ -139,102 +136,109 @@ const showcaseData = {
   },
 };
 
-let currentShowcaseKey = 'oct2025'; // This is the showcase that loads by default.
+let currentActiveKey = 'fall2025';
 
 const modal = document.getElementById('projectModal');
 const modalBody = document.getElementById('modal-body');
 
-function createProjectCard(project) {
+// Logic to build a card
+function buildCard(project) {
   return `
-                <div class="gallery-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer transform hover:-translate-y-2 transition-transform duration-300" onclick="openModal('${project.id}')">
-                    <div class="relative">
-                        <img src="${project.thumb}" alt="Project thumbnail for ${project.title}" class="w-full h-48 object-cover">
-                        <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0">
-                            <span class="text-white text-lg font-semibold">View Project</span>
+                <div class="gallery-item group bg-gray-800/40 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyan-500/50 transition-all cursor-pointer" onclick="openModal('${project.id}')">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img src="${project.thumb}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="overlay absolute inset-0 bg-gray-900/60 flex items-center justify-center opacity-0 backdrop-blur-sm">
+                            <button class="bg-white text-gray-900 px-5 py-2 rounded-full font-bold text-sm">Review Work</button>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl">${project.title}</h4>
-                        <p class="text-gray-400">by ${project.author}</p>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">${project.title}</h4>
+                        <p class="text-gray-500 text-sm mt-1">By ${project.author}</p>
                     </div>
                 </div>
             `;
 }
 
-function renderShowcase(key) {
-  const showcase = showcaseData[key];
-  if (!showcase) return;
+// Logic to render a semester
+function renderSemester(key) {
+  const sem = semesterData[key];
+  if (!sem) return;
 
-  document.getElementById(
-    'showcase-title'
-  ).textContent = `Student Showcase: ${showcase.displayTitle}`;
+  // Update UI Titles
+  document.getElementById('showcase-display-title').textContent =
+    sem.displayTitle.toUpperCase();
+  document.getElementById('current-semester-tag').textContent = sem.isCurrent
+    ? 'Current Semester'
+    : 'Archive Collection';
+  document.getElementById('current-semester-tag').className = sem.isCurrent
+    ? 'semester-badge inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6'
+    : 'bg-gray-700 inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-gray-300 mb-6';
 
-  const galleries = {
-    crea202: document.getElementById('crea202-gallery'),
-    crea330: document.getElementById('crea330-gallery'),
-    crea391: document.getElementById('crea391-gallery'),
-  };
+  // Populate Galleries
+  const courseIds = ['crea202', 'crea330', 'crea391'];
+  courseIds.forEach((id) => {
+    const container = document.getElementById(`${id}-gallery`);
+    const projects = sem.courses[id];
 
-  for (const course in galleries) {
-    galleries[course].innerHTML = ''; // Clear existing content
-    const projects = showcase.courses[course];
     if (projects && projects.length > 0) {
-      galleries[course].innerHTML = projects.map(createProjectCard).join('');
+      container.innerHTML = projects.map(buildCard).join('');
     } else {
-      galleries[course].innerHTML =
-        '<p class="text-gray-500 italic col-span-full">No projects submitted for this course in this showcase.</p>';
+      container.innerHTML = `<div class="col-span-full py-12 text-center bg-gray-800/20 rounded-2xl border border-dashed border-gray-700">
+                        <p class="text-gray-500 italic">No submissions archived for this course in ${sem.displayTitle}.</p>
+                    </div>`;
     }
-  }
-}
-
-function populateArchiveLinks() {
-  const container = document.getElementById('archive-links');
-  container.innerHTML = '';
-  const keys = Object.keys(showcaseData);
-
-  keys.forEach((key) => {
-    const showcase = showcaseData[key];
-    const button = document.createElement('button');
-    button.textContent = showcase.displayTitle;
-    button.className = `archive-btn border border-gray-600 px-4 py-2 rounded-md hover:bg-cyan-600 hover:border-cyan-600 transition ${
-      key === currentShowcaseKey ? 'active' : ''
-    }`;
-    button.onclick = () => switchShowcase(key);
-    container.appendChild(button);
   });
 }
 
-function switchShowcase(key) {
-  currentShowcaseKey = key;
-  renderShowcase(key);
-  populateArchiveLinks(); // Re-render to update the active state
+// Build archive navigation
+function buildArchiveNav() {
+  const nav = document.getElementById('archive-links');
+  nav.innerHTML = '';
+
+  Object.keys(semesterData).forEach((key) => {
+    const sem = semesterData[key];
+    const btn = document.createElement('button');
+    btn.textContent = sem.displayTitle;
+    btn.className = `archive-pill px-6 py-3 rounded-full border border-gray-700 font-semibold text-sm transition-all hover:border-cyan-400 ${
+      key === currentActiveKey ? 'active' : 'text-gray-400'
+    }`;
+    btn.onclick = () => {
+      currentActiveKey = key;
+      renderSemester(key);
+      buildArchiveNav();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    nav.appendChild(btn);
+  });
 }
 
 function openModal(projectId) {
-  const currentShowcase = showcaseData[currentShowcaseKey];
-  let projectData = null;
+  const sem = semesterData[currentActiveKey];
+  let found = null;
+  Object.values(sem.courses).forEach((list) => {
+    const p = list.find((item) => item.id === projectId);
+    if (p) found = p;
+  });
 
-  // Find the project in the current showcase's data
-  for (const course in currentShowcase.courses) {
-    const found = currentShowcase.courses[course].find(
-      (p) => p.id === projectId
-    );
-    if (found) {
-      projectData = found;
-      break;
-    }
-  }
-
-  if (!projectData) return;
+  if (!found) return;
 
   modalBody.innerHTML = `
-                <h3 class="text-3xl font-bold mb-2 text-white">${projectData.title}</h3>
-                <p class="text-sm text-gray-400 mb-4">by ${projectData.author}</p>
-                <div class="mb-6">${projectData.media}</div>
-                <p class="text-gray-300 mb-6">${projectData.description}</p>
-                <a href="${projectData.link}" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition duration-300">
-                    Launch Project
-                </a>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="mb-6">${found.media}</div>
+                        <a href="${found.link}" target="_blank" class="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-4 rounded-xl transition-colors">
+                            Launch Full Project
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-black text-white mb-2">${found.title}</h3>
+                        <p class="text-cyan-400 font-medium text-lg mb-6">By ${found.author}</p>
+                        <div class="h-px bg-gray-700 w-20 mb-6"></div>
+                        <h5 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Project Description</h5>
+                        <p class="text-gray-300 leading-relaxed mb-8">${found.description}</p>
+                        <p class="text-sm text-gray-500 italic">Submitted for ${sem.displayTitle}</p>
+                    </div>
+                </div>
             `;
 
   modal.classList.remove('hidden');
@@ -249,17 +253,14 @@ function openModal(projectId) {
 function closeModal() {
   modal.classList.add('opacity-0');
   modal.querySelector('.modal-content').classList.add('scale-95', 'opacity-0');
-  setTimeout(() => {
-    modal.classList.add('hidden');
-  }, 300);
+  setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeModal();
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
 });
 
-// Initial page load
 window.onload = () => {
-  renderShowcase(currentShowcaseKey);
-  populateArchiveLinks();
+  renderSemester(currentActiveKey);
+  buildArchiveNav();
 };
