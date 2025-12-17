@@ -12,7 +12,7 @@ const semesterData = {
           id: 'f25-c202-1',
           title: 'Clear Skies',
           author: 'Brooks Tunstall',
-          thumb: 'https://placehold.co/600x400/0E7490/FFFFFF?text=Clear+Skies',
+          thumb: 'clear-skies.png',
           mediaType: 'iframe',
           media:
             '<iframe width="100%" height="400" src="https://earsketch.gatech.edu/earsketch2/?sharing=u0qhOJv4CjJ64KuIBbbxAA&embedded=true&hideCode" frameborder="0"></iframe>',
@@ -24,7 +24,7 @@ const semesterData = {
           id: 'f25-c202-2',
           title: 'All Together',
           author: 'Sanaa Hodge',
-          thumb: 'https://placehold.co/600x400/155e75/FFFFFF?text=All+Together',
+          thumb: 'all-together.png',
           mediaType: 'iframe',
           media:
             '<iframe width="100%" height="400" src="https://earsketch.gatech.edu/earsketch2/?sharing=OrM8pivDTfO0B3WAogGijw&embedded=true&hideCode" frameborder="0"></iframe>',
@@ -38,10 +38,9 @@ const semesterData = {
           id: 'f25-c330-1',
           title: 'Music Player',
           author: 'Lydon Cameron',
-          thumb: 'https://placehold.co/600x400/059669/FFFFFF?text=Music+Player',
+          thumb: 'music-player-lydon.png',
           mediaType: 'image',
-          media:
-            '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Music+Player+Interface" class="w-full rounded-xl">',
+          media: '<img src="music-player-lydon.png" class="w-full rounded-xl">',
           description:
             'A custom-built interactive music player application using HTML5, CSS3, and JavaScript, featuring playlist management and audio controls.',
           links: [
@@ -55,11 +54,9 @@ const semesterData = {
           id: 'f25-c330-2',
           title: 'Smashing Bugs',
           author: 'Kira Kierra',
-          thumb:
-            'https://placehold.co/600x400/065f46/FFFFFF?text=Smashing+Bugs',
+          thumb: 'smashing-bugs.png',
           mediaType: 'image',
-          media:
-            '<img src="https://placehold.co/800x500/065f46/FFFFFF?text=Insect+Game+Interface" class="w-full rounded-xl">',
+          media: '<img src="smashing-bugs.png" class="w-full rounded-xl">',
           description:
             'An interactive web-based insect game exploring DOM manipulation and JavaScript event handling.',
           links: [
@@ -75,7 +72,7 @@ const semesterData = {
           id: 'f25-c391-1',
           title: 'Slime Diver',
           author: 'Christian Sherod',
-          thumb: 'https://placehold.co/600x400/7E22CE/FFFFFF?text=Slime+Diver',
+          thumb: 'slime-diver.jpeg',
           mediaType: 'video',
           media: 'p7uFYs1gy4s',
           description:
@@ -95,7 +92,7 @@ const semesterData = {
           id: 'f25-c391-2',
           title: 'Dummie',
           author: 'Henry Blaine',
-          thumb: 'https://placehold.co/600x400/6B21A8/FFFFFF?text=Dummie',
+          thumb: 'dummie.jpeg',
           mediaType: 'video',
           media: 'qgWAu0o4454',
           description:
@@ -111,8 +108,7 @@ const semesterData = {
           id: 'f25-c391-3',
           title: 'Quest for Camembert',
           author: 'Jordyn Johnson',
-          thumb:
-            'https://placehold.co/600x400/581C87/FFFFFF?text=Quest+for+Camembert',
+          thumb: 'quest-for-comembert.png',
           mediaType: 'video',
           media: 'A_WEpFH2UP0',
           description:
@@ -128,8 +124,7 @@ const semesterData = {
           id: 'f25-c391-4',
           title: 'The Purrfect Leap',
           author: 'Hannah Parker',
-          thumb:
-            'https://placehold.co/600x400/4c1d95/FFFFFF?text=The+Purrfect+Leap',
+          thumb: 'the-purrfect-leap.png',
           mediaType: 'video',
           media: 'ZY2YNNd9_dg',
           description:
@@ -145,8 +140,7 @@ const semesterData = {
           id: 'f25-c391-5',
           title: 'Asteroids Clone',
           author: 'Katie Albin',
-          thumb:
-            'https://placehold.co/600x400/3b0764/FFFFFF?text=Asteroids+Clone',
+          thumb: 'asteroids.png',
           mediaType: 'video',
           media: '0ACUTQsGFZ0',
           description:
@@ -162,7 +156,7 @@ const semesterData = {
           id: 'f25-c391-6',
           title: 'The Adventures of Birby',
           author: 'Angela Tran',
-          thumb: 'https://placehold.co/600x400/2e1065/FFFFFF?text=Birby',
+          thumb: 'the-adventures-of-birby.png',
           mediaType: 'video',
           media: 'p8tHkFdEyx8',
           description:
