@@ -318,7 +318,10 @@ function openModal(projectId) {
 function closeModal() {
   modal.classList.add('opacity-0');
   modal.querySelector('.modal-content').classList.add('scale-95', 'opacity-0');
-  setTimeout(() => modal.classList.add('hidden'), 300);
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    modalBody.innerHTML = '';
+  }, 300);
 }
 
 document.addEventListener('keydown', (e) => {
