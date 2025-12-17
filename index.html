@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
   </head>
   <body class="bg-gray-900 text-white antialiased">
     <!-- Navigation -->
@@ -69,19 +70,19 @@
           id="current-semester-tag"
           class="semester-badge inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6"
         >
-          Current Semester
+          Featured Semester
         </span>
         <h2
           id="showcase-display-title"
-          class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6"
+          class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 uppercase"
         >
           FALL 2025
         </h2>
         <p
           class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
         >
-          Showcasing excellence in Creative Coding, Web Design, and Game
-          Development from the downtown Arts District to the digital frontier.
+          Celebrating the intersection of code and creativity. Explore student
+          work from the Creative Technologies program in downtown Richmond, VA.
         </p>
       </div>
     </section>
@@ -92,8 +93,8 @@
       <section id="crea202" class="mb-24 scroll-mt-28">
         <div class="flex items-center gap-4 mb-8">
           <div class="h-px flex-1 bg-gray-800"></div>
-          <h3 class="text-2xl font-bold text-cyan-400 px-4">
-            CREA 202: Python & EarSketch
+          <h3 class="text-2xl font-bold text-cyan-400 px-4 whitespace-nowrap">
+            CREA 202: Music in Python
           </h3>
           <div class="h-px flex-1 bg-gray-800"></div>
         </div>
@@ -109,8 +110,8 @@
       <section id="crea330" class="mb-24 scroll-mt-28">
         <div class="flex items-center gap-4 mb-8">
           <div class="h-px flex-1 bg-gray-800"></div>
-          <h3 class="text-2xl font-bold text-green-400 px-4">
-            CREA 330: Interdisciplinary Web Design
+          <h3 class="text-2xl font-bold text-green-400 px-4 whitespace-nowrap">
+            CREA 330: Web Design & Dev
           </h3>
           <div class="h-px flex-1 bg-gray-800"></div>
         </div>
@@ -126,7 +127,7 @@
       <section id="crea391" class="mb-24 scroll-mt-28">
         <div class="flex items-center gap-4 mb-8">
           <div class="h-px flex-1 bg-gray-800"></div>
-          <h3 class="text-2xl font-bold text-purple-400 px-4">
+          <h3 class="text-2xl font-bold text-purple-400 px-4 whitespace-nowrap">
             CREA 391: 2D Game Design
           </h3>
           <div class="h-px flex-1 bg-gray-800"></div>
@@ -145,12 +146,10 @@
         class="bg-gray-800/50 rounded-3xl p-8 md:p-12 mb-16 border border-gray-700/50 scroll-mt-28"
       >
         <div class="max-w-3xl mb-10">
-          <h3 class="text-3xl font-bold text-white mb-4">
-            The Semester Archive
-          </h3>
+          <h3 class="text-3xl font-bold text-white mb-4">Semester Archive</h3>
           <p class="text-gray-400">
-            Explore historical student projects. Selecting a semester will
-            update the galleries above with that semester's submissions.
+            View galleries from previous semesters to see how our students have
+            grown and what they've built.
           </p>
         </div>
 
@@ -166,15 +165,19 @@
         class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
       >
         <div class="text-center md:text-left">
-          <h4 class="font-bold text-white text-lg">Virtual First Friday</h4>
+          <h4 class="font-bold text-white text-lg tracking-tight">
+            Virtual First Friday
+          </h4>
           <p class="text-gray-500 text-sm mt-1">
-            Inspired by Richmond, VA's downtown arts community.
+            Inspired by the Richmond Arts District community.
           </p>
         </div>
-        <div class="flex gap-8 text-gray-400 text-sm uppercase tracking-widest">
-          <span class="hover:text-white cursor-help">Creative Coding</span>
-          <span class="hover:text-white cursor-help">Web Design</span>
-          <span class="hover:text-white cursor-help">Game Dev</span>
+        <div
+          class="flex gap-8 text-gray-500 text-xs uppercase tracking-widest font-bold"
+        >
+          <span>Music Production</span>
+          <span>Web Development</span>
+          <span>Game Design</span>
         </div>
       </div>
     </footer>

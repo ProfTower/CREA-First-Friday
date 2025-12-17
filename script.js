@@ -1,9 +1,5 @@
 /**
- * SEMESTER DATA REPOSITORY
- * To update:
- * 1. Add a new object key (e.g., 'fall2026')
- * 2. Set 'isCurrent: true' for the latest and false for others
- * 3. Fill the 'courses' arrays with project objects
+ * PROJECT DATA REPOSITORY
  */
 const semesterData = {
   fall2025: {
@@ -14,42 +10,169 @@ const semesterData = {
       crea202: [
         {
           id: 'f25-c202-1',
-          title: 'Cybernetic Symphony',
-          author: 'Jordan V.',
-          thumb:
-            'https://placehold.co/600x400/0E7490/FFFFFF?text=Cyber+Symphony',
+          title: 'Clear Skies',
+          author: 'Brooks Tunstall',
+          thumb: 'https://placehold.co/600x400/0E7490/FFFFFF?text=Clear+Skies',
+          mediaType: 'iframe',
           media:
-            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center text-cyan-500 border border-cyan-900/50">EarSketch Player Placeholder</div>',
+            '<iframe width="100%" height="400" src="https://earsketch.gatech.edu/earsketch2/?sharing=u0qhOJv4CjJ64KuIBbbxAA&embedded=true&hideCode" frameborder="0"></iframe>',
           description:
-            'A Python-driven composition exploring complex tempo shifts and procedural percussion layering.',
-          link: '#',
+            'An algorithmic composition created using Python and EarSketch, focusing on clean melodic lines and atmospheric soundscapes.',
+          links: [],
+        },
+        {
+          id: 'f25-c202-2',
+          title: 'All Together',
+          author: 'Sanaa Hodge',
+          thumb: 'https://placehold.co/600x400/155e75/FFFFFF?text=All+Together',
+          mediaType: 'iframe',
+          media:
+            '<iframe width="100%" height="400" src="https://earsketch.gatech.edu/earsketch2/?sharing=OrM8pivDTfO0B3WAogGijw&embedded=true&hideCode" frameborder="0"></iframe>',
+          description:
+            'A rhythmic exploration of collaborative sounds and synchronized patterns, coded entirely in Python.',
+          links: [],
         },
       ],
       crea330: [
         {
           id: 'f25-c330-1',
-          title: 'Museum of the Future',
-          author: 'Elena S.',
-          thumb:
-            'https://placehold.co/600x400/059669/FFFFFF?text=Digital+Museum',
+          title: 'Music Player',
+          author: 'Lydon Cameron',
+          thumb: 'https://placehold.co/600x400/059669/FFFFFF?text=Music+Player',
+          mediaType: 'image',
           media:
-            '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Museum+UI+View" class="w-full rounded-xl">',
+            '<img src="https://placehold.co/800x500/059669/FFFFFF?text=Music+Player+Interface" class="w-full rounded-xl">',
           description:
-            'A React-based virtual gallery experience with immersive CSS animations.',
-          link: '#',
+            'A custom-built interactive music player application using HTML5, CSS3, and JavaScript, featuring playlist management and audio controls.',
+          links: [
+            {
+              label: 'Visit Live Website',
+              url: 'https://lydon-b1.github.io/Music-player/',
+            },
+          ],
+        },
+        {
+          id: 'f25-c330-2',
+          title: 'Smashing Bugs',
+          author: 'Kira Kierra',
+          thumb:
+            'https://placehold.co/600x400/065f46/FFFFFF?text=Smashing+Bugs',
+          mediaType: 'image',
+          media:
+            '<img src="https://placehold.co/800x500/065f46/FFFFFF?text=Insect+Game+Interface" class="w-full rounded-xl">',
+          description:
+            'An interactive web-based insect game exploring DOM manipulation and JavaScript event handling.',
+          links: [
+            {
+              label: 'Play in Browser',
+              url: 'https://calicocrisper.github.io/Mod6_InsectGame/',
+            },
+          ],
         },
       ],
       crea391: [
         {
           id: 'f25-c391-1',
-          title: 'Neon Runner',
-          author: 'Marcus K.',
-          thumb: 'https://placehold.co/600x400/7E22CE/FFFFFF?text=Neon+Runner',
-          media:
-            '<div class="bg-gray-900 aspect-video rounded-xl flex items-center justify-center text-purple-400 border border-purple-900/50 font-mono">GameMaker Gameplay Clip</div>',
+          title: 'Slime Diver',
+          author: 'Christian Sherod',
+          thumb: 'https://placehold.co/600x400/7E22CE/FFFFFF?text=Slime+Diver',
+          mediaType: 'video',
+          media: 'p7uFYs1gy4s',
           description:
-            'A high-speed precision platformer featuring frame-perfect collision logic.',
-          link: '#',
+            'A high-stakes diving adventure featuring custom Slime mechanics and fluid movement systems built in GameMaker.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1GDrf3aTj-V9JbXJQdAQC3qweppcwzSSa/view?usp=sharing',
+            },
+            {
+              label: 'Watch Gameplay Demo',
+              url: 'https://youtu.be/WKPOg_yXk2c',
+            },
+          ],
+        },
+        {
+          id: 'f25-c391-2',
+          title: 'Dummie',
+          author: 'Henry Blaine',
+          thumb: 'https://placehold.co/600x400/6B21A8/FFFFFF?text=Dummie',
+          mediaType: 'video',
+          media: 'qgWAu0o4454',
+          description:
+            'Explore a unique world as Dummie, featuring clever puzzles and 2D platforming challenges.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1BE2wvmetWLin4oyPmx9uLs4JkebLoCj4/view?usp=sharing',
+            },
+          ],
+        },
+        {
+          id: 'f25-c391-3',
+          title: 'Quest for Camembert',
+          author: 'Jordyn Johnson',
+          thumb:
+            'https://placehold.co/600x400/581C87/FFFFFF?text=Quest+for+Camembert',
+          mediaType: 'video',
+          media: 'A_WEpFH2UP0',
+          description:
+            'A charming narrative platformer where you seek the ultimate prize: the legendary Camembert cheese.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1zKs49zx0bf2msZl8oQEgSnHQbVBuUI1n/view?usp=sharing',
+            },
+          ],
+        },
+        {
+          id: 'f25-c391-4',
+          title: 'The Purrfect Leap',
+          author: 'Hannah Parker',
+          thumb:
+            'https://placehold.co/600x400/4c1d95/FFFFFF?text=The+Purrfect+Leap',
+          mediaType: 'video',
+          media: 'ZY2YNNd9_dg',
+          description:
+            'A cat-themed agility game focused on precision jumps and cozy pixel art environments.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1NU0NPLytRKOh74oQTtm1prB7iUfp1GK8/view?usp=sharing',
+            },
+          ],
+        },
+        {
+          id: 'f25-c391-5',
+          title: 'Asteroids Clone',
+          author: 'Katie Albin',
+          thumb:
+            'https://placehold.co/600x400/3b0764/FFFFFF?text=Asteroids+Clone',
+          mediaType: 'video',
+          media: '0ACUTQsGFZ0',
+          description:
+            'A polished reimagining of the classic arcade shooter, featuring physics-based movement and retro aesthetics.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1haNoaJJAupUTqlya_bxkIWqAvp2Q0l8t/view?usp=sharing',
+            },
+          ],
+        },
+        {
+          id: 'f25-c391-6',
+          title: 'The Adventures of Birby',
+          author: 'Angela Tran',
+          thumb: 'https://placehold.co/600x400/2e1065/FFFFFF?text=Birby',
+          mediaType: 'video',
+          media: 'p8tHkFdEyx8',
+          description:
+            'A whimsical 2D platformer following the journey of Birby through colorful, challenging levels.',
+          links: [
+            {
+              label: 'Download macOS (.dmg)',
+              url: 'https://drive.google.com/file/d/1IqYX6QoI4yv_S9pAQ95JGr6uAAUBW9lT/view?usp=sharing',
+            },
+          ],
         },
       ],
     },
@@ -58,81 +181,7 @@ const semesterData = {
     id: 'spring2025',
     displayTitle: 'Spring 2025',
     isCurrent: false,
-    courses: {
-      crea202: [
-        {
-          id: 's25-c202-1',
-          title: 'Botanical Beats',
-          author: 'Sam L.',
-          thumb: 'https://placehold.co/600x400/164E63/FFFFFF?text=Bio+Beats',
-          media:
-            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">EarSketch Preview</div>',
-          description:
-            'Music generated using Fibonacci sequences for rhythmic interval patterns.',
-          link: '#',
-        },
-      ],
-      crea330: [
-        {
-          id: 's25-c330-1',
-          title: 'Local Richmond Guide',
-          author: 'Casey R.',
-          thumb: 'https://placehold.co/600x400/15803D/FFFFFF?text=RVA+Guide',
-          media:
-            '<img src="https://placehold.co/800x500/15803D/FFFFFF?text=Project+View" class="w-full rounded-xl">',
-          description:
-            'A community resource site showcasing local restaurants and First Friday events.',
-          link: '#',
-        },
-      ],
-      crea391: [
-        {
-          id: 's25-c391-1',
-          title: 'Void Walker',
-          author: 'Taylor F.',
-          thumb: 'https://placehold.co/600x400/6B21A8/FFFFFF?text=Void+Walker',
-          media:
-            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center italic">Video of Gameplay</div>',
-          description:
-            'A puzzle-adventure exploring physics-based world manipulation.',
-          link: '#',
-        },
-      ],
-    },
-  },
-  fall2024: {
-    id: 'fall2024',
-    displayTitle: 'Fall 2024',
-    isCurrent: false,
-    courses: {
-      crea202: [],
-      crea330: [
-        {
-          id: 'f24-c330-1',
-          title: 'The Portfolio Lab',
-          author: 'Riley M.',
-          thumb: 'https://placehold.co/600x400/0f172a/FFFFFF?text=Portfolio+v1',
-          media:
-            '<img src="https://placehold.co/800x500/0f172a/FFFFFF?text=Old+Portfolio" class="w-full rounded-xl">',
-          description:
-            'Early explorations into responsive layouts and CSS grid systems.',
-          link: '#',
-        },
-      ],
-      crea391: [
-        {
-          id: 'f24-c391-1',
-          title: 'Pixel Quest',
-          author: 'Avery B.',
-          thumb: 'https://placehold.co/600x400/4c1d95/FFFFFF?text=Pixel+Quest',
-          media:
-            '<div class="bg-black aspect-video rounded-xl flex items-center justify-center">Game Demo</div>',
-          description:
-            'A simple RPG prototype focusing on NPC dialogue systems.',
-          link: '#',
-        },
-      ],
-    },
+    courses: { crea202: [], crea330: [], crea391: [] },
   },
 };
 
@@ -141,75 +190,69 @@ let currentActiveKey = 'fall2025';
 const modal = document.getElementById('projectModal');
 const modalBody = document.getElementById('modal-body');
 
-// Logic to build a card
 function buildCard(project) {
   return `
                 <div class="gallery-item group bg-gray-800/40 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyan-500/50 transition-all cursor-pointer" onclick="openModal('${project.id}')">
                     <div class="relative overflow-hidden aspect-video">
                         <img src="${project.thumb}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="overlay absolute inset-0 bg-gray-900/60 flex items-center justify-center opacity-0 backdrop-blur-sm">
-                            <button class="bg-white text-gray-900 px-5 py-2 rounded-full font-bold text-sm">Review Work</button>
+                            <button class="bg-white text-gray-900 px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest">Explore Project</button>
                         </div>
                     </div>
                     <div class="p-5">
-                        <h4 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">${project.title}</h4>
+                        <h4 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors line-clamp-1">${project.title}</h4>
                         <p class="text-gray-500 text-sm mt-1">By ${project.author}</p>
                     </div>
                 </div>
             `;
 }
 
-// Logic to render a semester
 function renderSemester(key) {
   const sem = semesterData[key];
   if (!sem) return;
 
-  // Update UI Titles
   document.getElementById('showcase-display-title').textContent =
     sem.displayTitle.toUpperCase();
   document.getElementById('current-semester-tag').textContent = sem.isCurrent
-    ? 'Current Semester'
+    ? 'Featured Semester'
     : 'Archive Collection';
   document.getElementById('current-semester-tag').className = sem.isCurrent
     ? 'semester-badge inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6'
-    : 'bg-gray-700 inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-gray-300 mb-6';
+    : 'bg-gray-700 inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-gray-400 mb-6';
 
-  // Populate Galleries
-  const courseIds = ['crea202', 'crea330', 'crea391'];
-  courseIds.forEach((id) => {
+  ['crea202', 'crea330', 'crea391'].forEach((id) => {
     const container = document.getElementById(`${id}-gallery`);
     const projects = sem.courses[id];
-
     if (projects && projects.length > 0) {
       container.innerHTML = projects.map(buildCard).join('');
     } else {
-      container.innerHTML = `<div class="col-span-full py-12 text-center bg-gray-800/20 rounded-2xl border border-dashed border-gray-700">
-                        <p class="text-gray-500 italic">No submissions archived for this course in ${sem.displayTitle}.</p>
+      container.innerHTML = `<div class="col-span-full py-16 text-center bg-gray-800/20 rounded-2xl border border-dashed border-gray-700">
+                        <p class="text-gray-500 italic">No submissions archived for this course yet.</p>
                     </div>`;
     }
   });
 }
 
-// Build archive navigation
 function buildArchiveNav() {
   const nav = document.getElementById('archive-links');
   nav.innerHTML = '';
-
-  Object.keys(semesterData).forEach((key) => {
-    const sem = semesterData[key];
-    const btn = document.createElement('button');
-    btn.textContent = sem.displayTitle;
-    btn.className = `archive-pill px-6 py-3 rounded-full border border-gray-700 font-semibold text-sm transition-all hover:border-cyan-400 ${
-      key === currentActiveKey ? 'active' : 'text-gray-400'
-    }`;
-    btn.onclick = () => {
-      currentActiveKey = key;
-      renderSemester(key);
-      buildArchiveNav();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    nav.appendChild(btn);
-  });
+  Object.keys(semesterData)
+    .reverse()
+    .forEach((key) => {
+      const sem = semesterData[key];
+      const btn = document.createElement('button');
+      btn.textContent = sem.displayTitle;
+      btn.className = `archive-pill px-6 py-3 rounded-full border border-gray-700 font-bold text-xs uppercase tracking-widest transition-all hover:border-cyan-400 ${
+        key === currentActiveKey ? 'active' : 'text-gray-400'
+      }`;
+      btn.onclick = () => {
+        currentActiveKey = key;
+        renderSemester(key);
+        buildArchiveNav();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+      nav.appendChild(btn);
+    });
 }
 
 function openModal(projectId) {
@@ -222,21 +265,49 @@ function openModal(projectId) {
 
   if (!found) return;
 
+  let mediaHtml = '';
+  if (found.mediaType === 'video') {
+    mediaHtml = `<div class="aspect-video w-full rounded-xl overflow-hidden bg-black shadow-2xl">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${found.media}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>`;
+  } else if (found.mediaType === 'iframe') {
+    mediaHtml = `<div class="w-full rounded-xl overflow-hidden shadow-2xl bg-gray-900">${found.media}</div>`;
+  } else {
+    mediaHtml = found.media;
+  }
+
+  const linksHtml = found.links
+    .map(
+      (link) =>
+        `<a href="${link.url}" target="_blank" class="flex-1 text-center bg-cyan-600 hover:bg-cyan-500 text-white font-black py-4 px-4 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/20">
+                    ${link.label}
+                </a>`
+    )
+    .join('');
+
   modalBody.innerHTML = `
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div>
-                        <div class="mb-6">${found.media}</div>
-                        <a href="${found.link}" target="_blank" class="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-4 rounded-xl transition-colors">
-                            Launch Full Project
-                        </a>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        ${mediaHtml}
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            ${linksHtml}
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-4xl font-black text-white mb-2">${found.title}</h3>
-                        <p class="text-cyan-400 font-medium text-lg mb-6">By ${found.author}</p>
-                        <div class="h-px bg-gray-700 w-20 mb-6"></div>
-                        <h5 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Project Description</h5>
-                        <p class="text-gray-300 leading-relaxed mb-8">${found.description}</p>
-                        <p class="text-sm text-gray-500 italic">Submitted for ${sem.displayTitle}</p>
+                    <div class="flex flex-col">
+                        <div class="mb-6">
+                            <h3 class="text-4xl md:text-5xl font-black text-white leading-tight mb-2 uppercase tracking-tighter">${found.title}</h3>
+                            <p class="text-cyan-400 font-bold text-xl">by ${found.author}</p>
+                        </div>
+                        <div class="h-1 bg-gray-700 w-16 mb-8 rounded-full"></div>
+                        <div class="space-y-6 flex-grow">
+                            <div>
+                                <h5 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-black mb-3">Project Brief</h5>
+                                <p class="text-gray-300 text-lg leading-relaxed font-medium">${found.description}</p>
+                            </div>
+                        </div>
+                        <div class="mt-12 pt-6 border-t border-gray-700">
+                             <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Showcased in ${sem.displayTitle}</p>
+                        </div>
                     </div>
                 </div>
             `;
