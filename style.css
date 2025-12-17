@@ -18,8 +18,13 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.archive-btn.active {
+.archive-pill.active {
   background-color: #06b6d4; /* cyan-500 */
   color: white;
   border-color: #06b6d4;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.semester-badge {
+  background: linear-gradient(90deg, #0891b2, #0e7490);
 }
